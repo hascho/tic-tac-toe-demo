@@ -34,7 +34,9 @@ export const Game = () => {
 
   return (
     <div className="game">
-      <p>winner: {winner ? winner : "undecided"}</p>
+      <div style={{ height: "50px" }}>
+        {winner ? <p>winner: {winner}</p> : null}
+      </div>
       <Board
         squares={state.board}
         winLocations={winLocations}
